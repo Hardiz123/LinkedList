@@ -19,8 +19,9 @@ public class Test {
         System.out.println("5. Delete last item from the list");
         System.out.println("6. Delete item from the list with given position");
         System.out.println("7. Insert in a sorted List");
-        System.out.println("8. view List");
-        System.out.println("9. exit");
+        System.out.println("8. Find an element");
+        System.out.println("9. view List");
+        System.out.println("10. exit");
         System.out.println("Enter your choice");
         int choice = sc.nextInt();
         int position,value;
@@ -60,11 +61,16 @@ public class Test {
                 System.out.println("Enter value");
                 value = sc.nextInt();
                 list.insertInSortedList(value);
-                break;          
+                break;
             case 8:
+                System.out.println("Enter value");
+                value = sc.nextInt();
+                list.findElement(value);
+                break;       
+            case 9:
                 list.viewList();
                 break;
-            case 9:
+            case 10:
                 flag = false;  
                 break;
             default:

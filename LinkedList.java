@@ -59,6 +59,17 @@ public class LinkedList {
         n.setNext(current);// now we point our new node to the next value
         temp.setNext(n); // we point our previous node to the new node that we created
     }
+
+    public void findElement(int val) {
+        int count=1;
+        Node current = start;
+
+        while(current!= null && val!=current.getData()){
+            current = current.getNext();
+            count++;
+        }
+        System.out.println("Present at postion = " +count);
+    }
     
     public void deleteFirst() {
         if(start==null){
