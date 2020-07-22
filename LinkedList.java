@@ -128,7 +128,7 @@ public class LinkedList {
        if(start==null){
            System.out.println("list is empty");
        }else{
-        Node current = start; // make a node and assign start value to is
+        Node current = start; // make a node and assign start value to it
         Node temp = null; // make a temp node
         while (current!=null && current.getData()!=val) { // this is the condition
             temp = current; //then current value will be in temp and current will getNext value
@@ -140,8 +140,24 @@ public class LinkedList {
         }
         else{
             System.out.println("Element not found");
+            return;
         }
 }
+
+public void reverseList(){
+		Node currNode = start;
+		Node nextNode = null;
+		Node prevNode = null;
+
+		while(currNode!=null){
+			nextNode = currNode.getNext();
+			currNode.setNext(prevNode);
+			prevNode = currNode;
+            currNode = nextNode;
+		}
+		start = prevNode;
+    }
+    
 
     public boolean isEmpty(){
 

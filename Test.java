@@ -14,15 +14,16 @@ public class Test {
         System.out.println();
         System.out.println("1.Add item to the list at start");
         System.out.println("2.Add item to the last at the list");
-        System.out.println("3.Add Item tothe list at a position");
+        System.out.println("3.Add Item to the list at a position");
         System.out.println("4. Delete first item from the list");
         System.out.println("5. Delete last item from the list");
         System.out.println("6. Delete item from the list with given position");
         System.out.println("7. Insert in a sorted List");
         System.out.println("8. Find an element");
         System.out.println("9. Delete an Element");
-        System.out.println("10. view List");
-        System.out.println("11. exit");
+        System.out.println("10. Reverse List");
+        System.out.println("11. view List");
+        System.out.println("12. exit");
         System.out.println("Enter your choice");
         int choice = sc.nextInt();
         int position,value;
@@ -79,11 +80,13 @@ public class Test {
                 value = sc.nextInt();
                 list.deleteElement(value);
                 break;
-                                  
             case 10:
+                list.reverseList();
+                break;      
+            case 11:
                 list.viewList();
                 break;
-            case 11:
+            case 12:
                 flag = false;  
                 break;
             default:
