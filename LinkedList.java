@@ -123,6 +123,8 @@ public class LinkedList {
     }
 
     public void deleteElement (int val) {
+        int count = findElement(val);
+        if(count>0){
        if(start==null){
            System.out.println("list is empty");
        }else{
@@ -134,7 +136,10 @@ public class LinkedList {
         }
         // now we point our new node to the next value
         temp.setNext(current.getNext());
-
+            }
+        }
+        else{
+            System.out.println("Element not found");
         }
 }
 
