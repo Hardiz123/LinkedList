@@ -145,14 +145,14 @@ public class LinkedList {
 }
 
 public void reverseList(){
-		Node currNode = start;
+		Node currNode = start; //point a node to the start
 		Node nextNode = null;
 		Node prevNode = null;
 
 		while(currNode!=null){
-			nextNode = currNode.getNext();
-			currNode.setNext(prevNode);
-			prevNode = currNode;
+            nextNode = currNode.getNext(); //point next node to the next of current node
+			currNode.setNext(prevNode); // set the current node to the previous node
+			prevNode = currNode; 
             currNode = nextNode;
 		}
 		start = prevNode;
