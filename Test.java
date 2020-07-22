@@ -20,8 +20,9 @@ public class Test {
         System.out.println("6. Delete item from the list with given position");
         System.out.println("7. Insert in a sorted List");
         System.out.println("8. Find an element");
-        System.out.println("9. view List");
-        System.out.println("10. exit");
+        System.out.println("9. Delete an Element");
+        System.out.println("10. view List");
+        System.out.println("11. exit");
         System.out.println("Enter your choice");
         int choice = sc.nextInt();
         int position,value;
@@ -29,12 +30,14 @@ public class Test {
         switch (choice) {
             case 1:
             System.out.println("Enter value of item");
+            System.out.println();
             value = sc.nextInt();
             list.insertAtFirst(value);
                 
                 break;
             case 2:
             System.out.println("Enter value of item");
+            System.out.println();
             value = sc.nextInt();
             list.insertAtLast(value);
                 break;       
@@ -42,6 +45,7 @@ public class Test {
             System.out.println("Enter position");
             position = sc.nextInt();
             System.out.println("Enter value of item");
+            System.out.println();
             value = sc.nextInt();
             list.insertAtpos(value,position);
                 break;
@@ -59,18 +63,27 @@ public class Test {
                 break;
             case 7:
                 System.out.println("Enter value");
+                System.out.println();
                 value = sc.nextInt();
                 list.insertInSortedList(value);
                 break;
             case 8:
                 System.out.println("Enter value");
+                System.out.println();
                 value = sc.nextInt();
-                list.findElement(value);
-                break;       
+                int count = list.findElement(value);
+                break;
             case 9:
+                System.out.println("Enter value");
+                System.out.println();
+                value = sc.nextInt();
+                list.deleteElement(value);
+                break;
+                                  
+            case 10:
                 list.viewList();
                 break;
-            case 10:
+            case 11:
                 flag = false;  
                 break;
             default:

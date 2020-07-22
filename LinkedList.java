@@ -60,7 +60,7 @@ public class LinkedList {
         temp.setNext(n); // we point our previous node to the new node that we created
     }
 
-    public void findElement(int val) {
+    public int findElement(int val) {
         int count=1;
         Node current = start;
 
@@ -69,6 +69,7 @@ public class LinkedList {
             count++;
         }
         System.out.println("Present at postion = " +count);
+        return count;
     }
     
     public void deleteFirst() {
@@ -120,6 +121,23 @@ public class LinkedList {
             t.setNext(t1.getNext());
         }
     }
+
+    public void deleteElement (int val) {
+       if(start==null){
+           System.out.println("list is empty");
+       }else{
+        Node current = start; // make a node and assign start value to is
+        Node temp = null; // make a temp node
+        while (current!=null && current.getData()!=val) { // this is the condition
+            temp = current; //then current value will be in temp and current will getNext value
+            current = current.getNext();
+        }
+        // now we point our new node to the next value
+        temp.setNext(current.getNext());
+
+        }
+}
+
     public boolean isEmpty(){
 
         return(start == null);
